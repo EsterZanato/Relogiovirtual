@@ -8,11 +8,9 @@ const relogio = setInterval(function time() {
     let min = DateToday.getMinutes();
     let s = DateToday.getSeconds ();
 
-    if (hr < 10) hr = '0' + hr;
-
-    if (min < 10) min = '0' + min;
-
-    if (s < 10) s = '0' + s;
+    horas.textContent = hr.toString().padStart(2, '0');
+    minutos.textContent = min.toString().padStart(2, '0')
+    segundos.textContent = s.toString().padStart(2, '0');
 
     horas.textContent = hr;
     minutos.textContent = min;
